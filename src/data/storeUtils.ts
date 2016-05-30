@@ -38,7 +38,7 @@ export function storeKeyNameFromField(field: Field, variables?: Object): string 
         const variableValue = variables[value.name.value];
         argObj[name.value] = variableValue;
       } else {
-        throw new Error(`For inline arguments, only scalar types are supported. To use Enum or \
+        console.warn(`For inline arguments, only scalar types are supported. To use Enum or \
 Object types, please pass them as variables.`);
       }
     });
